@@ -1,0 +1,31 @@
+<h2>User info</h2>
+  <%= image_tag user.get_profile_image(100,100) %>
+ <table class="table">
+   <tbody>
+     <tr>
+       <th>name</th>
+       <th><%= user.name %></th>
+     </tr>
+     <tr>
+       <th>animal name</th>
+       <th><%= user.animal_name %></th>
+     </tr>
+     <tr>
+       <th>introduction</th>
+       <th><%= user.introduction %></th>
+     </tr>
+     
+     <% if user.id == current_user.id %>
+       <%= link_to edit_user_path(current_user.id) do %>
+         <i class="fa-solid fa-gear"></i>
+       <% end %>
+       <% else %>
+       <%= link_to edit_user_path(user.id) do %>
+         <i class="fa-solid fa-gear"></i>
+       <% end %>
+    <% end %>
+    
+   </tbody>
+ </table>
+ 
+
