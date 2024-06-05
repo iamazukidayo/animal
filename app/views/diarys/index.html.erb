@@ -1,0 +1,24 @@
+
+<%= render 'users/userinfo', user: @user %>
+
+<h2>Diary</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>title</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @diarys.each do |diary| %>
+    <tr>
+      <td><%= link_to diary_path(diary.id) do %>
+            <%= image_tag diary.get_image(50,50) %>
+          <% end %></td>
+          
+      <td><%= diary.title %></td>
+      <td><%= link_to "show", diary_path(diary.id) %></td>
+    </tr>
+  </tbody>
+</table>

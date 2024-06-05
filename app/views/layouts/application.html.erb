@@ -19,7 +19,12 @@
       </li>
       <li>
         <%= link_to destroy_user_session_path, method: :delete do %>
-          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
+        <% end %>
+      </li>
+      <li>
+        <%= link_to new_diary_path do %>
+          <i class="fa-solid fa-pen-nib"></i> Diary
         <% end %>
       </li>
     <% else %>

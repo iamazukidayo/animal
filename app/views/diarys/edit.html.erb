@@ -1,0 +1,17 @@
+<h2>Editing screen</h2>
+
+<%= form_with model: @diary do |f| 
+<!--%= form_with model: @diary, url: diary_path(@diary.id), method: :patch do |f| %>-->
+
+
+<p><h4>image</h4></p>
+    <p><%= f.file_field :image, accept : "image/*" %></p>
+
+ <p><h4>title</h4></p>
+    <p><%= f.text_field :title %></p>
+
+ <p><h4>diary</h4></p>
+    <p><%= f.text_area :body %></p>
+    
+<% end %>
+

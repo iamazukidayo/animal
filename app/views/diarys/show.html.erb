@@ -1,0 +1,14 @@
+
+
+<h2>Diary</h2>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td><%= image_tag @diary.get_image(100,100) %></td>
+        <td><%= diary.title %></td>
+        <td></td>
+        <td><%= diary.body %></td>
+        <td> <%= @diary.created_at.strftime('%Y/%m/%d') %></td>
+      </tr>
+    </tbody>
+  </table>
